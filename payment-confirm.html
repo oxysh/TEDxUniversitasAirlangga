@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Confirmation</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/env.css">
+    <link rel="stylesheet" href="assets/css/payment-confirm.css">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h2>Payment Confirmation</h2>
+
+    <!-- Card -->
+    <div class="card">
+        <div class="grid">
+            <div class="left">
+                <p>Full Name</p>
+                <h3>Annisa Rahma</h3>
+                <br>
+                <p>Category</p>
+                <h3>Essay Event</h3>
+                <br>
+                <p>Total</p>
+                <h3 class="text-red">Rp50.000,00</h3>
+            </div>
+            <div class="right">
+                <div>
+                    <h4>Payment Method</h4>
+                    <div class="method">
+                        <div class="payment">
+                            <input type="radio" name="payment-method" id="dana">
+                            <label for="dana"><img src="assets/img/dana.svg" alt=""></label>
+                            <img class="help" src="assets/img/help.svg" data-toggle="modal" data-target="#helpDana">
+                        </div>
+                        <div class="payment">
+                            <input type="radio" name="payment-method" id="mandiri">
+                            <label for="mandiri"><img src="assets/img/mandiri.svg" alt=""></label>
+                            <img class="help" src="assets/img/help.svg" data-toggle="modal" data-target="#helpMandiri">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4>Transfer Slip</h4>
+                    <label for="inputFile">Attach your transfer slip here <img src="assets/img/attachment.svg"
+                            alt=""></label>
+                    <input type="file" name="inputFile" id="inputFile" style="display: none;">
+                </div>
+            </div>
+        </div>
+        <button class="btn-green" data-toggle="modal" data-target="#thanks">Submit</button>
+    </div>
+
+    <!-- Payment Dana -->
+    <div class="modal fade" id="helpDana" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="lg">
+                        <h2>Payment Instruction with <img src="assets/img/dana.svg" alt=""></h2>
+                        <h4 class="text-green">ID</h4>
+                        <ol>
+                            <li>Buka aplikasi DANA lalu pilih menu kirim</li>
+                            <li>Masukkan nomer 081331719462 (Amalia Malinda) dalam kolom penerima</li>
+                            <li>Masukkan nominal pembayaran</li>
+                            <li>Cek kembali apakah nomer penerima serta nominal pembayaran sudah sesuai</li>
+                            <li>Klik kirim dana jika sudah sesuai</li>
+                            <li>Lakukan konfirmasi dengan memasukkan 6 angka pin DANA</li>
+                        </ol>
+                        <p>Anda dapat menggunakan cara lain selama nomor tujuan dan nominal pembayaran sesuai.</p>
+                        <h4 class="text-green">ENG</h4>
+                        <ol>
+                            <li>Open your DANA application and pick the send menu</li>
+                            <li>Input the receiver number to 081331719462 (Amalia Malinda)</li>
+                            <li>Input the correct amount of payment</li>
+                            <li>Check once more to make sure the reciever number and payment amount are correct</li>
+                            <li>Click send</li>
+                            <li>Make a confirmation by input your 6 DANA pin</li>
+                        </ol>
+                        <p>You can choose other method as long as the receiver number and the amount of payment is
+                            correct.
+                        </p>
+                    </div>
+                    <div class="sm">
+                        <h2>Payment Instruction with <img src="assets/img/dana.svg" alt=""></h2>
+                        <div class="language">
+                            <button id="id">ID</button>
+                            <button id="eng">ENG</button>
+                        </div>
+                        <div class="instruction"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment Mandiri -->
+    <div class="modal fade" id="helpMandiri" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="lg">
+                        <h2>Payment Instruction with <img src="assets/img/mandiri.svg" alt=""
+                                style="padding-bottom: 10px;"></h2>
+                        <h4 class="text-green">ID</h4>
+                        <ol>
+                            <li>Login di aplikasi Mandiri Online</li>
+                            <li>Pilih "Transfer"</li>
+                            <li>Pilih "Ke Rekening Mandiri"</li>
+                            <li>Tentukan "Rekening Sumber"</li>
+                            <li>Isi "Rekening Tujuan" menjadi 1330015963192 (Jasmine Azzahra) dan "Jumlah" Transfer</li>
+                            <li>Lakukan konfirmasi dengan memasukkan MPIN anda</li>
+                        </ol>
+                        <p>Anda dapat menggunakan cara lain selama nomor tujuan dan nominal pembayaran sesuai.</p>
+                        <h4 class="text-green">ENG</h4>
+                        <ol>
+                            <li>Login to Mandiri Online application</li>
+                            <li>Click Transfer</li>
+                            <li>Click to Mandiri Account</li>
+                            <li>Choose your account source</li>
+                            <li>Fill your destination account to 1330015963192 (Jasmine Azzahra) and the correct amount
+                                of
+                            </li>
+                            <li>payment</li>
+                            <li>Make a confirmation and input your MPIN</li>
+                        </ol>
+                        <p>You can choose other method as long as the receiver number and the amount of payment is
+                            correct.
+                        </p>
+                    </div>
+                    <div class="sm">
+                        <h2>Payment Instruction with <img src="assets/img/mandiri.svg" alt=""
+                                style="padding-bottom: 10px;"></h2>
+                        <div class="language">
+                            <button id="id">ID</button>
+                            <button id="eng">ENG</button>
+                        </div>
+                        <div class="instruction"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thanks -->
+    <div class="modal fade" id="thanks" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h2 class="text-green">Thank you</h2>
+                    <p>Your payment will be proceed immediately</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image -->
+    <img class="bg green" src="assets/img/payment-green.svg" alt="">
+    <img class="bg red" src="assets/img/payment-red.svg" alt="">
+    <img class="bg-sm green" src="assets/img/payment-green-sm.svg" alt="">
+    <img class="bg-sm red" src="assets/img/payment-red-sm.svg" alt="">
+
+    <!-- Javascript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/payment-confirm.js"></script>
+</body>
+
+</html>

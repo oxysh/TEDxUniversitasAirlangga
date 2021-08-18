@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to TEDxUniversitasAirlangga</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="assets/css/env.css">
+    <link rel="stylesheet" href="assets/css/user-login.css">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="card">
+        <h2>User Login</h2>
+
+        <!-- warning -->
+        <div class="warning hidden">
+            <div class="close">&times;</div>
+            <p>Invalid Email or Password</p>
+        </div>
+        <div class="warning hidden" id="empty-fill">
+            <div class="close">&times;</div>
+            <p>Please fill all form</p>
+        </div>
+
+        <!-- form -->
+        <form action="">
+            <label for="email">
+                <h4>Email</h4>
+            </label>
+            <input type="text" id="email" name="email" class="mandatory">
+            <label for="password">
+                <h4>Password</h4>
+            </label>
+            <input type="password" id="password" name="password" class="mandatory">
+            <div class="remember-forgot">
+                <label for="remember">
+                    <input type="checkbox" name="remember" id="remember">
+                    Remember me
+                </label>
+                <a href="">Forgot Password</a>
+            </div>
+            <button class="btn-green" id="btn-login">Login</button>
+        </form>
+        <p>Don't have an account? <a href="">Sign Up</a></p>
+    </div>
+
+
+
+    <!-- Javascript -->
+    <script>
+        const mandatory = document.querySelectorAll('.mandatory');
+        const login = document.querySelector('#btn-login');
+        const emptyFill = document.querySelector('#empty-fill');
+        login.addEventListener('click', e => {
+            mandatory.forEach(x => {
+                if (x.value == '') {
+                    e.preventDefault();
+                    // INI ADD NYA PAKE HTML
+                    emptyFill.classList.remove('hidden');
+                }
+            })
+        })
+
+        const closes = document.querySelectorAll('.close');
+        closes.forEach(close => {
+            close.addEventListener('click', e => {
+                e.path[1].classList.add('hidden')
+            })
+        })
+
+        let inputs = document.querySelectorAll('input');
+        inputs.forEach(input => {
+            input.addEventListener('keypress', () => {
+                input.classList.add('normal-input')
+            })
+        })
+    </script>
+</body>
+
+</html>
