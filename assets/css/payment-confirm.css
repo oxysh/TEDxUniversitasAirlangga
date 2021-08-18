@@ -110,6 +110,10 @@ body h2 {
   display: none;
 }
 
+.grid input[name='payment-method']:checked + label {
+  background-color: #EBEBEB;
+}
+
 .grid label[for="dana"],
 .grid label[for="mandiri"] {
   margin: 0;
@@ -156,6 +160,10 @@ body h2 {
   border-radius: 10px;
   border: 2px dashed #960001;
   background-color: #EBEBEB;
+}
+
+.grid label[for='inputFile'] span {
+  font-size: 14px;
   color: rgba(0, 0, 0, 0.5);
 }
 

@@ -61,6 +61,10 @@ body {
 
     input[name='payment-method'] {
         display: none;
+
+        &:checked + label {
+            background-color: $white;
+        }
     }
 
     label[for="dana"],
@@ -96,7 +100,11 @@ body {
         border-radius: 10px;
         border: 2px dashed $prime-red;
         background-color: $white;
-        color: rgba($color: #000000, $alpha: .5);
+        
+        span {
+            font-size: 14px;
+            color: rgba($color: #000000, $alpha: .5);
+        }
     }
 }
 

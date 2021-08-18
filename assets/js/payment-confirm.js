@@ -123,3 +123,8 @@ mandiriOpt.forEach(btn => {
         }
     })
 })
+
+// PAYMENT FILE ATTACHMENT
+$('#inputFile')[0].addEventListener('change', () => {
+    $('label[for="inputFile"] span')[0].innerHTML = $('input#inputFile')[0].files[0].name;
+}, true)
