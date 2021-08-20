@@ -122,6 +122,12 @@ $darker-sand-beach: #D7C3A9;
     opacity: 1;
     text-shadow: none;
     box-shadow: none;
+    z-index: 999;
+
+    &:hover {
+        transform: none;
+        box-shadow: none;
+    }
 }
 
 @mixin border-white-gradient {

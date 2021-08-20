@@ -192,6 +192,14 @@ button.close {
   text-shadow: none;
   -webkit-box-shadow: none;
           box-shadow: none;
+  z-index: 999;
+}
+
+button.close:hover {
+  -webkit-transform: none;
+          transform: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 #helpGdrive .modal-body {
