@@ -35,7 +35,6 @@ regis.addEventListener('click', e => {
 
 // ILANGIN AFTERFORM PAS KLIK PAY LATER
 window.addEventListener('click', e => {
-    console.log(e.target);
     if (e.target.className == 'later') {
         e.target.parentElement.parentElement.parentElement.classList.add('hidden')
     }

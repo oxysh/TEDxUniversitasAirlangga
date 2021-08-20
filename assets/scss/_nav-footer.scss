@@ -16,6 +16,10 @@ nav {
     }
 
     .menus {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         display: flex;
         align-items: center;
         gap: 6rem;
@@ -34,7 +38,7 @@ nav {
 
     .dropdown-menu {
         top: calc(100% + .5rem);
-        background-color: rgba(235, 235, 235, 0.2);
+        background-color: rgba(1,1,1, 0.9);
         backdrop-filter: blur(20px);
 
         a {
