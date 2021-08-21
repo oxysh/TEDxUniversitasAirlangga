@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Call for Essay</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/env.css">
+    <link rel="stylesheet" href="./assets/css/explain-cfe.css" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <img src="assets/img/white-logo.png" alt="" class="logo">
+        <div class="menus">
+            <div class="dropdown">
+                <a href="" class="menu dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                    aria-expanded="false">Competition</a>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">Call for Essay</a></li>
+                    <li><a class="dropdown-item disabled" href="#">Coming Soon</a></li>
+                </ul>
+            </div>
+            <a href="" class="menu active">Check Status</a>
+
+        </div>
+        <div></div>
+        <a href="" class="menu sm">Menu</a>
+    </nav>
+
+    <!-- Konten -->
+    <img src="./assets/img/white-logo.png" class="tedx" />
+    <div class="grid">
+        <!-- Description CFE -->
+        <div class="card-left">
+            <div class="header">
+                <h2 class="text-green">Call for Essay</h2>
+                <h4 class="text-red">Fee Registration: 50K</h4>
+            </div>
+            <img class="img-sm" src="./assets/img/icon-cfe.svg" />
+            <p>
+                Call for essay adalah sebuah event yang diselenggarakan untuk mencari gagasan/ide kreatif yang
+                dituangkan dalam bentuk tulisan. Pada tahun ini, Call for Essay TEDx Universitas Airlangga mengangkat
+                tema yakni <span class="text-green">Ripple</span> <span class="text-red">Effect</span>.
+            </p>
+            <div class="mid">
+                <img class="img-lg" src="./assets/img/icon-cfe.svg" />
+                <div class="left">
+                    <div class="list">
+                        <p>Syarat dan ketentuan:</p>
+                        <ol>
+                            <li>
+                                Peserta dibuka untuk masyarakat umum berusia 17 - 25 tahun.
+                            </li>
+                            <li>Lomba bersifat individu</li>
+                            <li>
+                                Karya essay dapat dibuat menggunakan Bahasa Inggris atau
+                                Bahasa Indonesia.
+                            </li>
+                            <li>Tidak ada ketentuan khusus untuk penulisan essay.</li>
+                            <li>1 peserta hanya dapat mengirimkan 1 essay</li>
+                        </ol>
+                    </div>
+                    <p>
+                        Untuk informasi lebih lanjut, dapat diakses melewati booklet
+                        yang sudah disediakan.
+                    </p>
+                </div>
+            </div>
+            <div class="cfe-btn">
+                <button id="booklet">Booklet</button>
+                <button class="btn-green" id="regist">Register</button>
+            </div>
+        </div>
+
+        <!-- How to Register & Timeline -->
+        <div class="card-right">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <h2 class="text-green">How to Register</h2>
+                    <div class="dash"></div>
+                    <p>Click</p>
+                    <img src="./assets/img/button.svg" alt="" />
+                    <img src="./assets/img/bottom-arrow.svg" class="arrow" />
+                    <p>Fill all the form and submit your document link</p>
+                    <img src="./assets/img/bottom-arrow.svg" class="arrow" />
+                    <p>Complete payment and upload the transfer slip</p>
+                    <img src="./assets/img/bottom-arrow.svg" class="arrow" />
+                    <p>
+                        Wait for the payment validation<br />
+                        (you can check your status on Check Status page)
+                    </p>
+                    <img src="./assets/img/bottom-arrow.svg" class="arrow" />
+                    <p>Wait for the announcement of your essay</p>
+                </div>
+                <div class="mySlides fade">
+                    <h1>Timeline</h1>
+                    <div class="dash"></div>
+                    <div class="timeline">
+                        <div class="line"></div>
+                        <div class="agenda right">
+                            <div class="circle"></div>
+                            <div class="txt">
+                                <p class="title">Open Registration</p>
+                                <p>23 August - 11 September</p>
+                            </div>
+                        </div>
+                        <div class="agenda left now">
+                            <div class="circle"></div>
+                            <div class="txt">
+                                <p class="title">Close Registration</p>
+                                <p>16 September</p>
+                            </div>
+                        </div>
+                        <div class="agenda right present">
+                            <div class="circle"></div>
+                            <div class="txt">
+                                <p class="title">Winner Announcement</p>
+                                <p>23 September</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+            </div>
+        </div>
+
+        <!-- Writing Format -->
+        <div class="writing">
+            <h2 class="text-green">Writing Format</h2>
+            <div class="content-writing">
+                <div class="box">
+                    <img src="./assets/img/paper-size.svg" />
+                    <h4 class="text-green">Paper Size</h4>
+                    <p>
+                        A4/Justify<br>
+                        Top, left = 4 cm<br>
+                        Bot, right = 3 cm
+                    </p>
+                </div>
+                <div class="box bigger">
+                    <img src="./assets/img/word-rules.svg" />
+                    <h4 class="text-green">Word Rules</h4>
+                    <p>
+                        Times New Roman (12pt)<br>
+                        500-1000 words<br>
+                        English and bahasa are accepted<br>
+                        APA (American Pshycological Association)
+                    </p>
+                </div>
+                <div class="box">
+                    <img src="./assets/img/file-format.svg" />
+                    <h4 class="text-green">File Format</h4>
+                    <p>
+                        Name_Institute_Title<br>
+                        PDF and Docx (2 files)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="top">
+            <img class="logo" src="assets/img/white-logo.png" alt="">
+            <div class="parts">
+                <div class="follow">
+                    <h4>Follow Us</h4>
+                    <div>
+                        <button><img src="/assets/img/insta.svg" alt=""></button>
+                        <button><img src="/assets/img/youtube.svg" alt=""></button>
+                        <button><img src="/assets/img/linkedin.svg" alt=""></button>
+                        <button><img src="/assets/img/line.svg" alt=""></button>
+                        <button><img src="/assets/img/tiktok.svg" alt=""></button>
+                    </div>
+                </div>
+                <hr>
+                <!-- CONTACT-NYA ILANG BUAT PAGE UMUM; NANTI ADA DI TIAP PAGE LOMBANYA -->
+                <!-- <div class="contact">
+                    <h4>Contact Us</h4>
+                    <p><img src="/assets/img/whatsapp.svg" alt=""> 08281291829 (Name)</p>
+                    <p><img src="/assets/img/whatsapp.svg" alt=""> 08281291829 (Name)</p>
+                </div>
+                <hr> -->
+                <div class="address">
+                    <h4>Address</h4>
+                    <p>Jl. Airlangga No.4, Kec. Gubeng, Kota SBY, Jawa Timur 60286</p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <p><img src="/assets/img/copyright.svg" alt=""> Copyright 2021</p>
+            <p>This independent TEDx event is operated under license from TED</p>
+        </div>
+    </footer>
+
+
+
+
+
+    <!-- <div class="content">
+
+        <div class="card-left">
+            <div class="head">
+                <h1>Call for Essay</h1>
+                <h2>Fee Registration: 50K</h2>
+            </div>
+            <p>
+                Call for essay adalah sebuah event yang diselenggarakan untuk
+                mencari gagasan / ide kreatif yang dituangkan dalam bentuk tulisan.
+                Pada tahun ini, Call for Essay TEDx Universitas Airlangga mengangkat
+                tema yakni <span class="text-green">Ripple</span>
+                <span class="text-red">Effect</span>.
+            </p>
+            <div class="middle">
+                <div class="left">
+                    <div class="list">
+                        <p>Syarat dan ketentuan:</p>
+                        <ol>
+                            <li>
+                                Peserta dibuka untuk masyarakat umum berusia 17 - 25 tahun.
+                            </li>
+                            <li>Lomba bersifat individu</li>
+                            <li>
+                                Karya essay dapat dibuat menggunakan Bahasa Inggris atau
+                                Bahasa Indonesia.
+                            </li>
+                            <li>Tidak ada ketentuan khusus untuk penulisan essay.</li>
+                            <li>1 peserta hanya dapat mengirimkan 1 essay</li>
+                        </ol>
+                    </div>
+                    <p>
+                        Untuk informasi lebih lanjut, dapat diakses melewati booklet
+                        yang sudah disediakan.
+                    </p>
+                </div>
+                <img src="./assets/img/icon-cfe.svg" />
+            </div>
+            <div class="button">
+                <button id="booklet">Booklet</button>
+                <button class="green" id="regist">Register</button>
+            </div>
+        </div>
+        <div class="card-right">
+            <div class="change-content">
+                <div class="how-to-reg">
+                    <h1>How to Register</h1>
+                    <div class="dash"></div>
+                    <div class="content-reg">
+                        <span>
+                            <p>Click</p>
+                            <img src="./assets/img/button.svg" alt="" />
+                        </span>
+                        <img src="./assets/img/bottom-arrow.svg" class="arrow" />
+                        <p>Fill all the form and submit your document link</p>
+                        <img src="./assets/img/bottom-arrow.svg" class="arrow" />
+                        <p>Complete payment and upload the transfer slip</p>
+                        <img src="./assets/img/bottom-arrow.svg" class="arrow" />
+                        <p>
+                            Wait for the payment<br />(you can check your status on Check
+                            Status page)
+                        </p>
+                        <img src="./assets/img/bottom-arrow.svg" class="arrow" />
+                        <p>Wait for the announcement of your essay</p>
+                    </div>
+                </div>
+                <div class="timeline">
+                    <h1>Timeline</h1>
+                    <div class="dash"></div>
+                    <div class="content-timeline"></div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="bigger-dots" id="register-ex"></div>
+                <div class="dots" id="timeline-ex"></div>
+            </div>
+        </div>
+    </div>
+    <div class="writting">
+        <h1>Writting Format</h1>
+        <div class="content-writing">
+            <div class="box">
+                <img src="./assets/img/paper-size.svg" />
+                <h2>Paper Size</h2>
+                <p>
+                    A4/Justify<br />Top, left = 4 cm<br />
+                    Bot, right = 3 cm
+                </p>
+            </div>
+            <div class="box bigger">
+                <img src="./assets/img/word-rules.svg" />
+                <h2>Word Rules</h2>
+                <p>
+                    Times New Roman (12pt)<br />500-1000 words<br />
+                    English and bahasa are accepted<br />
+                    APA (American Pshycological Association)
+                </p>
+            </div>
+            <div class="box">
+                <img src="./assets/img/file-format.svg" />
+                <h2>File Format</h2>
+                <p>Name_Instititution_Title<br />PDF and Docx (2 files)</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer"></div> -->
+
+    <!-- Image -->
+    <img src="./assets/img/cfe-green.svg" class="bg green" />
+    <img src="./assets/img/cfe-red.svg" class="bg red" />
+    <img src="./assets/img/cfe-red1-sm.svg" class="bg-sm red1">
+    <img src="./assets/img/cfe-red2-sm.svg" class="bg-sm red2" />
+    <img src="./assets/img/cfe-green1-sm.svg" class="bg-sm green1" />
+    <img src="./assets/img/cfe-green2-sm.svg" class="bg-sm green2" />
+
+    <!-- Script -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <script src="./assets/js/explain-cfe.js"></script>
+</body>
+
+</html>
