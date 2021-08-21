@@ -1,7 +1,7 @@
 nav {
   width: 100%;
   padding: .5rem 1rem;
-  position: fixed;
+  position: fixed !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -19,12 +19,17 @@ nav {
           box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.25);
 }
 
+nav .navbar-brand {
+  margin: 0;
+  padding: 0;
+}
+
 nav .logo {
   width: 194px;
   height: 22px;
 }
 
-nav .menus {
+nav .collapse {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -36,15 +41,41 @@ nav .menus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 6rem;
 }
 
-nav .menu {
-  font-weight: 500;
+nav .collapse .navbar-nav {
+  gap: 1rem;
+}
+
+nav .collapse.show {
+  position: unset;
+  -webkit-transform: unset;
+          transform: unset;
+}
+
+nav .collapse.show .navbar-nav {
+  width: 100%;
+}
+
+nav .collapse.show .dropdown-menu {
+  background-color: transparent;
+  border: none;
+}
+
+nav .nav-link:focus {
   color: #EBEBEB;
 }
 
-nav .menu.active {
+nav .nav-link:hover {
+  color: #24B9BA;
+}
+
+nav .nav-item a {
+  padding: 0;
+  color: #EBEBEB;
+}
+
+nav .nav-item.active a {
   font-weight: 600;
   color: #24B9BA;
 }
@@ -52,8 +83,6 @@ nav .menu.active {
 nav .dropdown-menu {
   top: calc(100% + .5rem);
   background-color: rgba(1, 1, 1, 0.9);
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
 }
 
 nav .dropdown-menu a {
